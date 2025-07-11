@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Button</title>
+</head>
+<body>  
+      <div class="container">
+        <h2>Nhập tên của bạn</h2>
+        <input type="text" id="nameInput" placeholder="Nhập tên của bạn">
+        <button onclick="ten()">Gửi</button>
+        <div class="result" id="result"></div>
+      </div>
+    
+      <script>
+        function ten() {
+          var name = document.getElementById('nameInput').value;
+          var resultDiv = document.getElementById('result');
+          
+          if (name.trim() !== "") {
+            console.log("Hello, " + name + "!") ;
+          } else {
+            console.log("Vui lòng nhập tên!") ;
+          }
+        }
+      </script>
+</body>
+</html>

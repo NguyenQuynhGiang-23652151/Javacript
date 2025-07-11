@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Nhập 2 số</h2>
+    <input type="number" id="so1" placeholder="Nhập số thứ nhất"><br>
+    <input type="number" id="so2" placeholder="Nhập số thứ hai"><br>
+    <button onclick="Tong()">Gửi</button>
+    <p id="Ketqua"></p>
+    <script>
+        function Tong() {
+            var so1 = parseFloat(document.getElementById("so1").value);
+            var so2 = parseFloat(document.getElementById("so2").value);
+            var tong = so1 + so2;
+            document.getElementById("Ketqua").innerHTML = "Tổng hai số là: " + tong;
+        }
+    </script>
+</body>
+</html>
