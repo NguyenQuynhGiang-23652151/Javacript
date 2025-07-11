@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm Tra Ký Tự</title>
+    
+</head>
+<body>
+    <h2>Nhập Ký Tự</h2>
+    
+    <input type="text" id="kytu" placeholder="Nhập ký tự"><br><br>
+    
+    <button onclick="kiemtra()">Gửi</button>
+    
+    <p id="ketqua"></p>
+
+    <script>
+        function kiemtra() {
+            var kytu = document.getElementById("kytu").value;
+            var ketqua = isNaN(kytu) ? "Đây là ký tự chuỗi." : "Đây là ký tự số.";
+            document.getElementById("ketqua").innerHTML = (kytu === "") ? "Vui lòng nhập một ký tự!" : ketqua;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Tổng Hai Số</title>
+</head>
+<body>
+    <h2>Tính Tổng Hai Số</h2>
+
+    <input type="text" id="so1" placeholder="Nhập số thứ nhất"><br><br>
+    
+    <input type="text" id="so2" placeholder="Nhập số thứ hai"><br><br>
+    
+    <button onclick="Tong()">Gửi</button>
+    
+    <p id="ketQua"></p>
+
+    <script>
+        function Tong() {
+            var so1 = document.getElementById("so1").value;
+            var so2 = document.getElementById("so2").value;
+            var thongBao = document.getElementById("ketQua");
+
+            if (so1 === "" || so2 === "") {
+                thongBao.innerHTML = "Vui lòng nhập đầy đủ cả hai số!";
+                return;
+            }
+
+            if (isNaN(so1) || isNaN(so2)) {
+                thongBao.innerHTML = "Vui lòng nhập số, không phải chuỗi!";
+                return;
+            }
+
+            var tong = parseFloat(so1) + parseFloat(so2);
+            thongBao.innerHTML = "Tổng hai số là: " + tong;
+        }
+    </script>
+</body>
+</html>
