@@ -9,20 +9,19 @@
     <div class="container">
         <h2>Nhập tên của bạn</h2>
         <input type="text" id="nameInput" placeholder="Nhập tên của bạn">
-        <button onclick="greetUser()">Gửi</button>
-        
+        <button onclick="ten()">Gửi</button>
         <div class="result" id="result"></div>
       </div>
     
       <script>
-        function greetUser() {
-          const name = document.getElementById('nameInput').value;
-          const resultDiv = document.getElementById('result');
+        function ten() {
+          var name = document.getElementById('nameInput').value;
+          var resultDiv = document.getElementById('result');
           
           if (name.trim() !== "") {
-            resultDiv.textContent = "Hello, " + name + "!";
+            console.log("Hello, " + name + "!") ;
           } else {
-            resultDiv.textContent = "Vui lòng nhập tên!";
+            console.log("Vui lòng nhập tên!") ;
           }
         }
       </script>
