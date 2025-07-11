@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập Ký Tự</title>
+</head>
+<body>
+    <h2>Nhập Ký Tự</h2>
+    <input type="text" id="kytu" placeholder="Nhập ký tự"><br><br>
+    <button onclick="kiemtra()">Gửi</button>
+    <p id="xuat"></p>
+    <script>
+        function kiemtra() {
+            var kytu = document.getElementById("kytu").value;
+            if (kytu === "") {
+                document.getElementById("xuat").innerHTML = "Vui lòng nhập ký tự!";
+            }
+            else {
+                document.getElementById("xuat").innerHTML = "Ký tự bạn đã nhập là: " + kytu;
+            }
+        }
+    </script>
+</body>
+</html>
